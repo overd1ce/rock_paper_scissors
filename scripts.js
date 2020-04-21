@@ -59,12 +59,12 @@ function playRound(e) {
             }
         }
         showResult(resultString);
-        addToScoreTally(result); 
+        addToScore(result); 
         checkWinner();
     }   
 }
 
-function addToScoreTally(result) {
+function addToScore(result) {
     if (result == 'win') {
         playerWins++;
     }

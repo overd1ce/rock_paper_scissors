@@ -1,6 +1,6 @@
 let playerWins = 0;
 let computerWins = 0;
-const MAX_POINTS = 5;
+const maxPoints = 5;
 let gameActive = true;
 
 function computerPlay() {
@@ -91,10 +91,10 @@ function showScore() {
 
 function checkWinner() {
     let winner;
-    if (playerWins == MAX_POINTS) {
+    if (playerWins == maxPoints) {
         winner = 'player';
     }
-    else if (computerWins == MAX_POINTS) {
+    else if (computerWins == maxPoints) {
         winner = 'computer';
     }
     else {

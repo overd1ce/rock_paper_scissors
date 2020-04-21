@@ -1,1 +1,3 @@
-Simple JavaScript rock paper scissors game played through the console
+Updated Rock, Paper Scissors
+</br>Adding Buttons & Score display
+</br></br>

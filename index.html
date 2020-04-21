@@ -3,72 +3,29 @@
 <head>
     <meta charset="utf-8">
     <title>Rock, Paper Scissors</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <script>
- 
-let playerScore = parseInt(0);
-let computerScore = parseInt(0);
-let i = 0;
-
-function computerPlay(){
-    let chars = [ "ROCK", "PAPER", "SCISSORS" ];
-    return chars[ Math.floor(Math.random() * chars.length)];
-}
-function playRound(playerSelection, computerSelection) {
-    if(computerSelection === playerSelection){
-        return "Ops, Tie!";
-    }
-            if(playerSelection === "ROCK"){
-                if (computerSelection === "SCISSORS"){
-                    return playerScore++, "You Win!";
-                } else {
-                    computerScore++;
-                    return "You lose! Paper beats Rock!";
-                }
-            }
-            if(playerSelection === "PAPER"){
-                if(computerSelection === "ROCK") {
-                    playerScore++;
-                    return "You Win!";
-                } else {
-                    computerScore++;
-                    return "You lose! Scissors beat Paper!";
-                }
-            }
-            if(playerSelection === "SCISSORS"){
-                if(computerSelection === "PAPER"){
-                    playerScore++;
-                    return playerScore, "You Win!"
-                } else {
-                    computerScore++;
-                    return "You lose! Rock beats Scissors!"
-                }
-            } 
-    }
-
-    function game(){
-    const playerInput = prompt("Rock, Paper or Scissors?");
-    const playerSelection = playerInput.toUpperCase()    ;
-    const computerSelection = computerPlay();
-    console.log("Player play:", playerSelection)
-    console.log("Computer play:", computerSelection)
-    console.log(playRound(playerSelection, computerSelection))
-    console.log ("Your score: ", playerScore)
-    console.log ("Computer score: ", computerScore)
-
-    i++;
-    if (i !== 5) {
-        game();
-    } else {
-        alert("Game Over! User score: "+playerScore+" vs Computer score: "+computerScore+"");
-    }
-
-
-}
- game();
- 
-    </script>
+    <div id="main_wrapper">
+        <div id="header">
+            <h1>You think you have what it takes to beat a computer in a </br><span class="main_header">ROCK, PAPER SCISSORS</span></br>game</h1>
+        </div><hr>
+        <div id="scoreboard">
+            <h3>Scoreboard:</h3>
+            <div id="score">Player: 0 Computer: 0</div>
+        </div><hr>
+        <div id="player">
+            <p>First one to reach 5, wins!</p>
+            <h3>Make your choice:</h3>
+            <button id="rock"><i class="far fa-hand-rock"></i> Rock</button>
+            <button id="paper"><i class="far fa-hand-paper"></i> Paper</button>
+            <button id="scissors"><i class="far fa-hand-scissors"></i> Sscissors</button>
+        </div>
+        <div id="results">
+        </div>
+    </div>
+<script src="scripts.js"></script>
 </body>
 </html>
 

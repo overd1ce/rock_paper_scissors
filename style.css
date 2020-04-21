@@ -1,0 +1,44 @@
+#header,
+#scoreboard {
+    text-align: center;
+}
+h1 {
+    font-size: 1.2em;
+    color: #2e3131;
+}
+h3 {
+    color: #2e3131;
+    font-size: 1.4em;
+}
+.main_header {
+    color: red;
+    font-size: 1.6em;
+}
+.fa-hand-rock,
+.fa-hand-paper {
+    transform: rotate(90deg);
+}
+.fa-hand-scissors {
+    transform: scaleX(-1);
+}
+
+#player{
+    text-align: center;
+}
+.player_choice {
+    margin-bottom: 15px;
+}
+
+#score {
+    font-size: 1.8em;
+}
+#results {
+    padding-top: 2em;
+    text-align: center;
+}
+.win-player,
+.win-computer {
+    padding-top: 1em;
+    font-weight: 800;
+    font-size: 2em;
+}
